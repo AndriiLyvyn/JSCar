@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Page</title>
+    <link rel="stylesheet" href="/style/formPageStyle.css" />
+  </head>
+  <body>
+    <div id="containerForm">
+      <button id="buyBeturn">Powrót</button>
+      <h1>Formularz zakupowy:</h1>
+
+      <label for="cash">Gotówka</label>
+      <input type="radio" id="cash" name="payment" value="Gotówka" />
+      <br />
+      <label for="leasing">Leasing</label>
+      <input type="radio" id="leasing" name="payment" value="Leasing" />
+      <br />
+      <label for="nameImput">Imię Nazwisko:</label>
+      <input type="text" id="nameImput" />
+      <br />
+      <label for="place">Miejsce odbioru:</label>
+      <input type="text" id="place" />
+      <br />
+      <label for="date">Data dostawy:</label>
+      <select name="" id="date"></select>
+      <br />
+      <h2>Aksesoria do samochodu:</h2>
+      <ul id="ol"></ul>
+      <h3>Aksesoria dodane do zamówienia:</h3>
+
+      <ul id="listAdd"></ul>
+      <h3>Nazwa auta : <span id="carNameForm"></span></h3>
+      <h2>Cena całkowita: <span id="carPriceForm"></span></h2>
+      <button id="buyBtn">Zakup</button>
+
+      <div id="errorDate"></div>
+    </div>
+    <div id="endPaga">
+      <h1>Dziękujemy za dokonanie zakupu auta:<span id="carName"></span></h1>
+      <h2>Wybrana metoda płatności:<span id="methodPay"></span></h2>
+      <h2>Auto zostanie dostarczone: <span id="carDataDelivere"></span></h2>
+      <h2>Cena całkowita wynosi: <span id="carPrice"></span></h2>
+      <div id="accesotryCart">
+      <ul id="listOrderAccsesori"></ul>
+    </div>
+      <img id="imageCar" src="" alt="" />
+      <button id="backToHomePage">Powrót do strony głownej </button>
+    </div>
+
+    <script src="/script/formPageScript.js"></script>
+  </body>
+</html>

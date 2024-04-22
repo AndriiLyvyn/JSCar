@@ -1,0 +1,33 @@
+[{
+     "name":"BMW",
+     "price":123000,
+     "age":5,
+     "carMileage": "20000km",
+     "power": "145 KM",
+     "image": "/image/BMW.jpg"
+},
+{
+     "name":"Audi",
+     "price":9000,
+     "age":10,
+     "carMileage": "300000km",
+     "power": "65 KM",
+     "image": "/image/Audi.jpg"
+},  
+{
+     "name":"Mercedes",
+     "price":13000,
+     "age":10,
+     "carMileage": "100km",
+     "power": "15 KM",
+     "image": "/image/Mercedes.jpg"
+},
+{
+     "name":"Toyota",
+     "price":17000,
+     "age":8,
+     "carMileage": "2200km",
+     "power": "67 KM",
+     "image": "/image/Toyota.jpg"
+}
+]
