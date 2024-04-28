@@ -11,11 +11,13 @@
       <button id="buyBeturn">Powrót</button>
       <h1>Formularz zakupowy:</h1>
 
+      <div class="radioSection">
       <label for="cash">Gotówka</label>
       <input type="radio" id="cash" name="payment" value="Gotówka" />
       <br />
       <label for="leasing">Leasing</label>
       <input type="radio" id="leasing" name="payment" value="Leasing" />
+    </div>
       <br />
       <label for="nameImput">Imię Nazwisko:</label>
       <input type="text" id="nameImput" />
@@ -31,22 +33,29 @@
       <h3>Aksesoria dodane do zamówienia:</h3>
 
       <ul id="listAdd"></ul>
-      <h3>Nazwa auta : <span id="carNameForm"></span></h3>
+      <h3>Marka samochodu : <span id="carNameForm"></span></h3>
       <h2>Cena całkowita: <span id="carPriceForm"></span></h2>
-      <button id="buyBtn">Zakup</button>
+      <div class="buyBtn">
+        <button id="buyBtn">Zakup</button>
+      </div>
+      
 
       <div id="errorDate"></div>
     </div>
-    <div id="endPaga">
-      <h1>Dziękujemy za dokonanie zakupu auta:<span id="carName"></span></h1>
-      <h2>Wybrana metoda płatności:<span id="methodPay"></span></h2>
-      <h2>Auto zostanie dostarczone: <span id="carDataDelivere"></span></h2>
-      <h2>Cena całkowita wynosi: <span id="carPrice"></span></h2>
-      <div id="accesotryCart">
-      <ul id="listOrderAccsesori"></ul>
-    </div>
-      <img id="imageCar" src="" alt="" />
-      <button id="backToHomePage">Powrót do strony głownej </button>
+    <div id="endPage">
+      <div id="endPageCart">
+        <h1>Dziękujemy za dokonanie zakupu auta:<span id="carName"></span></h1>
+        <h2>Wybrana metoda płatności:<span id="methodPay"></span></h2>
+        <h2>Auto zostanie dostarczone: <span id="carDataDelivere"></span></h2>
+        <h2>Cena całkowita wynosi: <span id="carPrice"></span></h2>
+        <div id="accesotryCart">
+          <ul id="listOrderAccsesori"></ul>
+        </div>
+        <img id="imageCar" src="" alt="" />
+      </div>
+      <p id="backPage">
+        <button id="backToHomePage">Powrót do strony głownej</button>
+      </p>
     </div>
 
     <script src="/script/formPageScript.js"></script>

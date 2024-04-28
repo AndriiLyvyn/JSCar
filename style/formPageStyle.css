@@ -1,56 +1,167 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/image/homeImage/pexels-freenwrld-1587267.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
 }
 
-#containerForm , #endPaga {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+#containerForm {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(170, 157, 157);
+  border-radius: 14px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
+}
+
+#containerForm h1,
+h2,
+h3 {
+  text-align: center;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.radioSection {
+  display: flex;
+  justify-content: space-around;
 }
 
 input[type="text"],
 select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 400px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-ol {
-    margin-left: 20px;
+option {
+  font-weight: bold;
 }
 
-h1, h2, h3 {
-    margin-top: 20px;
+#ol {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+#ol li {
+  cursor: pointer;
+  width: 400px;
+  margin-bottom: 10px;
+  margin: 10px;
+  background-color: #007bff;
+  display: block;
+  list-style-type: none;
+  border-radius: 5px;
+}
+#ol li p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-span {
-    font-weight: bold;
+#ol :hover {
+  background-color: rgb(30, 100, 30);
+  border-radius: 5px;
+}
+#listAdd {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+#listAdd li {
+  cursor: pointer;
+  text-align: left;
+  width: 400px;
+  margin: 10px;
+  padding: 2px;
+  background-color: #007bff;
+  display: block;
+  list-style-type: none;
+  border-radius: 5px;
+}
+#listAdd :hover {
+  background-color: rgb(155, 53, 25);
+  border-radius: 5px;
 }
 
 #errorDate {
-    color: red;
-    margin-top: 10px;
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
 }
 
+.buyBtn {
+  text-align: center;
+}
 
+#endPageCart {
+  margin-top: 20px;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  background-color: rgb(170, 157, 157);
+  max-width: 800px;
+  height: 600px auto;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+#endPageCart h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+#endPageCart img {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#endPageCart ul li {
+  font-size: 16px;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding-left: 70px;
+  text-align: left;
+}
+
+#backToHomePage {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#backPage {
+  text-align: center;
+}

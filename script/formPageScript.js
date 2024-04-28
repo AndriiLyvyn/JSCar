@@ -46,6 +46,8 @@ const $errorDate = document.getElementById("errorDate");
 const $methodPay = document.getElementById("methodPay");
 const $carDataDelivere = document.getElementById("carDataDelivere");
 const $endPage = document.getElementById("endPage");
+const $backPage = document.getElementById("backPage");
+
 
 const olListAccsesoriasCar = document.getElementById("ol");
 const listAddAccsesoriesCar = document.getElementById("listAdd");
@@ -98,7 +100,8 @@ function formCart() {
   });
 }
 createData();
-$endPaga.style.display = "none";
+$endPage.style.display = "none";
+
 //Pzycisk zakupu
 $buyBtn.addEventListener("click", () => {
   validateForm();
@@ -108,7 +111,9 @@ $buyBtn.addEventListener("click", () => {
 
 accessoriesCar.forEach((element) => {
   const listAccessory = document.createElement("li");
-  listAccessory.textContent = `${element.id} ${element.name}: ${element.price} PLN`;
+  const listAccessotyP = document.createElement("p");
+  listAccessotyP.textContent = `${element.name}: ${element.price} PLN`;
+  listAccessory.appendChild(listAccessotyP)
   olListAccsesoriasCar.appendChild(listAccessory);
 });
 
@@ -157,10 +162,10 @@ listAddAccsesoriesCar.addEventListener("click", (e) => {
     e.target.innerText = `${targetText.split(" ilość ")[0]} ilość ${
       quantity - 1
     } Suma: ${price * (quantity - 1)} PLN`;
-    suma -= price; // Odejmujemy cenę jednej jednostki
+    suma -= price; 
   } else {
     e.target.remove();
-    suma -= price; // Odejmujemy cenę ostatniej jednostki
+    suma -= price;
   }
 
   updatePriceDisplay(suma);
@@ -182,6 +187,27 @@ function getRadioBtn() {
   $errorDate.appendChild(notPay);
   console.log("Nie wybrano metody płatności ");
 }
+
+
+
+function saveData() {
+ 
+  const firstName = document.getElementById('nameImput').value;
+  const adress = document.getElementById('place').value;
+  localStorage.setItem('firstName', firstName);
+  localStorage.setItem('adress',adress );
+}
+window.addEventListener('load', function() {
+  
+  const storedFirstName = localStorage.getItem('firstName') || '';
+  const storedAdress = localStorage.getItem('adress') || '';
+  document.getElementById('nameImput').value = storedFirstName;
+  document.getElementById('place').value = storedAdress;
+  saveData();
+});
+
+document.getElementById('nameImput').addEventListener('input', saveData);
+document.getElementById('place').addEventListener('input', saveData);
 
 function getName() {
   const name = $nameImput.value.trim();
@@ -274,12 +300,13 @@ function validateForm() {
 
   if ($containerForm.style.display === "block") {
     $containerForm.style.display = "none";
-    $endPaga.style.display = "block";
+    $endPage.style.display = "block";
   }
 
   $containerForm.style.display = "none";
 
-  $endPaga.style.display = "block";
+  $endPage.style.display = "block";
+  
 }
 
 $backToHomePage.addEventListener("click", () => {
