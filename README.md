@@ -9,27 +9,27 @@ Zakup i realizacja transakcji: udostępnia formularz umożliwiający wprowadzeni
 Trwałość danych: wykorzystuje pamięć lokalną do utrwalania danych wprowadzanych przez użytkownika i wybranych szczegółów samochodu w sesjach przeglądarki.
 Walidacja formularza: zapewnia wypełnienie wszystkich wymaganych pól i sprawdza wprowadzone przez użytkownika dane przed przesłaniem pod kątem błędów.
 Dynamiczny wybór daty: umożliwia użytkownikom wybranie daty dostawy z dynamicznie generowanej listy.
-Technologie
-HTML5
-CSS3
-JavaScript (ES6+)
-Organizować coś
-Aby uruchomić ten projekt:
+##Technologie
+-HTML5
+-CSS3
+-JavaScript (ES6+)
 
-## Sklonuj repozytorium na komputer lokalny.
-Otwórz katalog główny projektu.
-Aby uruchomić aplikację, uruchom plik homePage.html w nowoczesnej przeglądarce internetowej.
-Rozwój
-Użyj prostego serwera HTTP, jeśli Twoja przeglądarka ogranicza adresy URL plików przed dostępem do innych plików.
+##Aby uruchomić ten projekt:
+
+ -Sklonuj repozytorium na komputer lokalny.
+-Otwórz katalog główny projektu.
+-Aby uruchomić aplikację, uruchom plik homePage.html w nowoczesnej przeglądarce internetowej.
+##Rozwój
+-Użyj prostego serwera HTTP, jeśli Twoja przeglądarka ogranicza adresy URL plików przed dostępem do innych plików.
 ## Pliki i katalogi
-homePage.html - Główny punkt wejścia aplikacji.
-formPage.html - Główny punkt wejścia aplikacji.
-homePageStyle.css — zawiera styl storny Głownej.
-formPageStyle.css — zawiera styl strony z formulazrzem.
-homePageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie głównej .
-formPageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie z formularzem oraz podsumowaniem.
-samochody.json - Przykładowy plik JSON zawierający dane o samochodach.
-README.md — dokumentacja zawierająca przegląd projektu, instrukcje konfiguracji i szczegóły użytkowania.
+-homePage.html - Główny punkt wejścia aplikacji.
+-formPage.html - Główny punkt wejścia aplikacji.
+-homePageStyle.css — zawiera styl storny Głownej.
+-formPageStyle.css — zawiera styl strony z formulazrzem.
+-homePageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie głównej .
+-formPageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie z formularzem oraz podsumowaniem.
+-samochody.json - Przykładowy plik JSON zawierający dane o samochodach.
+-README.md — dokumentacja zawierająca przegląd projektu, instrukcje konfiguracji i szczegóły użytkowania.
 ## Jak używać
 Przeglądaj samochody: wyświetl listę samochodów i wybierz ten, który chcesz kupić.
 Dodaj akcesoria: Wybierz akcesoria z podanej listy; dostosować ilości według uznania.
