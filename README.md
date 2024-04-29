@@ -10,9 +10,9 @@ Trwałość danych: wykorzystuje pamięć lokalną do utrwalania danych wprowadz
 Walidacja formularza: zapewnia wypełnienie wszystkich wymaganych pól i sprawdza wprowadzone przez użytkownika dane przed przesłaniem pod kątem błędów.
 Dynamiczny wybór daty: umożliwia użytkownikom wybranie daty dostawy z dynamicznie generowanej listy.
 ## Technologie
--HTML5
--CSS3
--JavaScript (ES6+)
+- HTML5
+- CSS3
+- JavaScript (ES6+)
 
 ## Aby uruchomić ten projekt:
 
