@@ -1,5 +1,5 @@
 # Aplikacja do zakupów samochodów
-Opis
+## Opis
 Ta aplikacja internetowa umożliwia użytkownikom przeglądanie, konfigurowanie i kupowanie samochodów wraz z akcesoriami online. Oferuje funkcje przeglądania szczegółów samochodu, dodawania akcesoriów samochodowych, obliczania całkowitych kosztów i zarządzania danymi użytkowników za pomocą pamięci lokalnej. Aplikacja obsługuje dynamiczne interakcje, takie jak wybór samochodu, sprawdzanie poprawności formularza, trwałość pamięci lokalnej i asynchroniczne pobieranie danych z pliku JSON.
 
 ## Cechy
