@@ -25,13 +25,13 @@ Dynamiczny wybór daty: umożliwia użytkownikom wybranie daty dostawy z dynamic
 - homePage.html - Główny punkt wejścia aplikacji.
 - formPage.html - Główny punkt wejścia aplikacji.
 - homePageStyle.css — zawiera styl storny Głownej.
-- formPageStyle.css — zawiera styl strony z formulazrzem.
+- formPageStyle.css — zawiera styl strony z formularzem.
 - homePageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie głównej .
 - formPageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie z formularzem oraz podsumowaniem.
 - samochody.json - Przykładowy plik JSON zawierający dane o samochodach.
 - README.md — dokumentacja zawierająca przegląd projektu, instrukcje konfiguracji i szczegóły użytkowania.
 ## Jak używać
-Przeglądaj samochody: wyświetl listę samochodów i wybierz ten, który chcesz kupić.
-Dodaj akcesoria: Wybierz akcesoria z podanej listy; dostosować ilości według uznania.
-Wypełnij formularz: Wprowadź wymagane informacje, takie jak imię i nazwisko, adres, metoda płatności i data dostawy.
-Sfinalizuj zakup: przejrzyj swoje zamówienie i wyślij je, jeśli wszystkie weryfikacje przejdą pomyślnie. Wyświetli się wówczas podsumowanie zamówienia.
+ - Przeglądaj samochody: wyświetl listę samochodów i wybierz ten, który chcesz kupić.
+-Dodaj akcesoria: Wybierz akcesoria z podanej listy; dostosować ilości według uznania.
+- Wypełnij formularz: Wprowadź wymagane informacje, takie jak imię i nazwisko, adres, metoda płatności i data dostawy.
+- Sfinalizuj zakup: przejrzyj swoje zamówienie i wyślij je, jeśli wszystkie weryfikacje przejdą pomyślnie. Wyświetli się wówczas podsumowanie zamówienia.
