@@ -1,7 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-
   padding: 0;
   display: flex;
   justify-content: center;
@@ -9,7 +8,6 @@ body {
   background-image: url(/image/homeImage/pexels-freenwrld-1587267.jpg);
   background-repeat: no-repeat;
   background-position: center;
-
   background-size: cover;
 }
 
@@ -20,15 +18,14 @@ body {
   background-color: rgb(170, 157, 157);
   border-radius: 14px;
 }
-
 button {
   padding: 10px 20px;
   background-color: #007bff;
-  color: #fff;
+  color: black;
   border: none;
   cursor: pointer;
+  font-weight: bold;
 }
-
 button:hover {
   background-color: #0056b3;
 }
@@ -49,26 +46,31 @@ label {
   justify-content: space-around;
 }
 
-input[type="text"],
-select {
+input[type="text"],select {
   width: 400px;
   padding: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
+  background-color: rgba(230, 213, 213, 0.573);
   border-radius: 4px;
   font-weight: bold;
 }
-
-option {
+select {
+  width: 419px;
+}
+select  option {
   font-weight: bold;
+  background-color: rgba(230, 213, 213, 0.573);
+  text-align: center;
+  
 }
 
-#ol {
+#ulListAccessory {
   margin-left: 0px;
   padding-left: 0px;
 }
-#ol li {
+#ulListAccessory li {
   cursor: pointer;
   width: 400px;
   margin-bottom: 10px;
@@ -78,13 +80,13 @@ option {
   list-style-type: none;
   border-radius: 5px;
 }
-#ol li p {
+#ulListAccessory li p {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#ol :hover {
+#ulListAccessory :hover {
   background-color: rgb(30, 100, 30);
   border-radius: 5px;
 }

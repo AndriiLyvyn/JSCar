@@ -11,11 +11,7 @@ const carPower = document.getElementById("carPower");
 const btnBuyCar = document.getElementById("btnBuyCar");
 const listCars = document.getElementById("listCars");
 
-const $displayCarts = document.getElementById("displayCarts")
-
-
-
-
+const $displayCarts = document.getElementById("displayCarts");
 
 function fetchJSONdate() {
   return new Promise((resolve, reject) => {
@@ -71,7 +67,7 @@ function displayCart(data) {
     power.innerHTML = `Moc silnika: <span id="carPower_${element.id}">${element.power} </span>`;
 
     const buyButton = document.createElement("button");
-    buyButton.classList.add("btnBuyCar"); // zmieniono na classList
+    buyButton.classList.add("btnBuyCar");
     buyButton.innerText = "Kup";
 
     buyButton.addEventListener("click", () => {
@@ -96,4 +92,3 @@ function displayCart(data) {
     $displayCarts.appendChild(carCart);
   });
 }
-

@@ -49,7 +49,7 @@ const $endPage = document.getElementById("endPage");
 const $backPage = document.getElementById("backPage");
 
 
-const olListAccsesoriasCar = document.getElementById("ol");
+const olListAccsesoriasCar = document.getElementById("ulListAccessory");
 const listAddAccsesoriesCar = document.getElementById("listAdd");
 
 function getListOfAccesoru() {
@@ -61,8 +61,9 @@ function getListOfAccesoru() {
   }
   return itemsArray;
 }
-
+//Pobranie listy akcesoriów do podsumowania 
 function createListFromItems(itemsArray) {
+  $listOrderAccsesori.innerHTML = '';
   const end = document.createElement("h2");
   end.textContent = "Aksesoria do zamówienia:";
   if (itemsArray.length === 0) {
@@ -78,7 +79,7 @@ function createListFromItems(itemsArray) {
     }
   }
 }
-
+//Pobranie danych z Local Storage do  formularza (cena , marka samochodu, ścieżka do zdjęcia samochodu) 
 getDateOfCatinLocStor();
 function getDateOfCatinLocStor() {
   const modelCar = localStorage.getItem("nameCar");
@@ -91,7 +92,7 @@ function getDateOfCatinLocStor() {
   $imageCar.src = imageCar;
   $imageCar.alt = modelCar;
 }
-
+//Przyciks króry usuwa dane z Local Storage przy powrocie do Home Page
 formCart();
 function formCart() {
   $buyReturn.addEventListener("click", () => {
@@ -108,7 +109,7 @@ $buyBtn.addEventListener("click", () => {
   const date = getListOfAccesoru();
   createListFromItems(date);
 });
-
+//Pobranie danych z listy aksesoriów
 accessoriesCar.forEach((element) => {
   const listAccessory = document.createElement("li");
   const listAccessotyP = document.createElement("p");
@@ -120,11 +121,13 @@ accessoriesCar.forEach((element) => {
 const storedCarPrice = parseFloat(localStorage.getItem("priceCar")) || 0;
 let suma = storedCarPrice;
 
+//Funkcja która aktualizuję  cene samochodów i cenę aksesoriów
 function updatePriceDisplay(totalPrice) {
   $carPriceForm.innerText = `${totalPrice} PLN`;
   $carPrice.innerText = `${totalPrice} PLN`;
 }
 
+//Funkcja dodania akcesoriów do zamówienia 
 olListAccsesoriasCar.addEventListener("click", (e) => {
   const targetText = e.target.textContent.trim();
   const price = parseFloat(targetText.split(": ")[1].split(" PLN")[0]);
@@ -153,6 +156,7 @@ olListAccsesoriasCar.addEventListener("click", (e) => {
   updatePriceDisplay(suma);
 });
 
+//Funkcja usunięcia produktu z listy zamówienia 
 listAddAccsesoriesCar.addEventListener("click", (e) => {
   const targetText = e.target.textContent.trim();
   const price = parseFloat(e.target.dataset.price);
@@ -170,7 +174,7 @@ listAddAccsesoriesCar.addEventListener("click", (e) => {
 
   updatePriceDisplay(suma);
 });
-
+// Funkcja która sprawdza czy  przycis metoda płatności został zaznaczony
 function getRadioBtn() {
   const notPay = document.createElement("p");
   notPay.classList.add("errorPay");
@@ -189,7 +193,7 @@ function getRadioBtn() {
 }
 
 
-
+//Funkcja zapisuję dane klienta aby przy odświeżeniu strony damy zostaly na miejscu 
 function saveData() {
  
   const firstName = document.getElementById('nameImput').value;
@@ -198,22 +202,20 @@ function saveData() {
   localStorage.setItem('adress',adress );
 }
 window.addEventListener('load', function() {
-  
   const storedFirstName = localStorage.getItem('firstName') || '';
   const storedAdress = localStorage.getItem('adress') || '';
   document.getElementById('nameImput').value = storedFirstName;
   document.getElementById('place').value = storedAdress;
   saveData();
 });
-
 document.getElementById('nameImput').addEventListener('input', saveData);
 document.getElementById('place').addEventListener('input', saveData);
 
+//Funkcja która pobiera dane klienta imię oraz nazwisko oraz adres dostawy 
+
 function getName() {
   const name = $nameImput.value.trim();
-
   const nameData = document.createElement("p");
-
   if (name === "") {
     nameData.innerText = "Nie podaleś imenia oraz nazwiska";
     $errorDate.appendChild(nameData);
@@ -221,10 +223,8 @@ function getName() {
     $errorDate.appendChild(nameData);
   } else {
     nameData.innerText = "W imieniu oraz nazwisku brakuję spacji";
-
     $errorDate.appendChild(nameData);
   }
-
   const place = $place.value;
   if (place === "") {
     const placeData = document.createElement("p");
@@ -234,13 +234,16 @@ function getName() {
   return name;
 }
 
-showDate();
-function showDate() {
+getShowDate();
+function getShowDate() {
   $date.addEventListener("change", () => {
     console.log(`Data dostawy to:${$date.value} roku`);
     $carDataDelivere.innerText = `${$date.value} roku`;
   });
 }
+
+//Funkcja która sprawdza czy data dostawy została zaznaczona  
+
 function showDayDeliver() {
   const dateError = document.createElement("p");
   if ($date.value) {
@@ -256,6 +259,8 @@ function showDayDeliver() {
     $errorDate.appendChild(dateError);
   }
 }
+
+//Funkcja która sprawdza tworzy datę dostawy  
 
 function createData() {
   const emptyOption = document.createElement("option");
@@ -278,6 +283,7 @@ function createData() {
     $date.add(option);
   }
 }
+//Funkcja która sprawdza czy wsyskie dane zgodne ,jeżeli tak przesyła do listy podsumowania
 
 function validateForm() {
   const paymentMethod = getRadioBtn();
@@ -291,7 +297,7 @@ function validateForm() {
 
   if (
     !paymentMethod === null ||
-    name === "" ||
+    name === "" || !name.includes(" ")||
     place === "" ||
     selectedDate === undefined
   ) {
@@ -308,6 +314,8 @@ function validateForm() {
   $endPage.style.display = "block";
   
 }
+
+//Funkcja przekierowuję do  strony Home Page i usuwa dane lockal Storege 
 
 $backToHomePage.addEventListener("click", () => {
   window.location.href = "homePage.html";
