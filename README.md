@@ -25,6 +25,7 @@ Dynamiczny wybór daty: umożliwia użytkownikom wybranie daty dostawy z dynamic
 - formPage.html - Główny punkt wejścia aplikacji.
 - homePageStyle.css — zawiera styl storny Głownej.
 - formPageStyle.css — zawiera styl strony z formularzem.
+- Katalog image - zawiera zdjęcia samochodów.
 - homePageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie głównej .
 - formPageScript.js — logika biznesowa do obsługi interakcji użytkownika, na stronie z formularzem oraz podsumowaniem.
 - samochody.json - Przykładowy plik JSON zawierający dane o samochodach.
