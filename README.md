@@ -19,7 +19,6 @@ Dynamiczny wybór daty: umożliwia użytkownikom wybranie daty dostawy z dynamic
 - Sklonuj repozytorium na komputer lokalny.
 - Otwórz katalog główny projektu.
 - Aby uruchomić aplikację, uruchom plik homePage.html w nowoczesnej przeglądarce internetowej.
-## Rozwój
 - Użyj prostego serwera HTTP, jeśli Twoja przeglądarka ogranicza adresy URL plików przed dostępem do innych plików.
 ## Pliki i katalogi
 - homePage.html - Główny punkt wejścia aplikacji.
