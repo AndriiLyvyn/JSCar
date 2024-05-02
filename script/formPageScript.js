@@ -21,7 +21,7 @@ const accessoriesCar = [
   },
 ];
 
-const $buyReturn = document.getElementById("buyBeturn");
+const $buyReturn = document.getElementById("buyReturn");
 const $backToHomePage = document.getElementById("backToHomePage");
 
 const $carNameForm = document.getElementById("carNameForm");
@@ -48,7 +48,6 @@ const $carDataDelivere = document.getElementById("carDataDelivere");
 const $endPage = document.getElementById("endPage");
 const $backPage = document.getElementById("backPage");
 
-
 const olListAccsesoriasCar = document.getElementById("ulListAccessory");
 const listAddAccsesoriesCar = document.getElementById("listAdd");
 
@@ -61,9 +60,9 @@ function getListOfAccesoru() {
   }
   return itemsArray;
 }
-//Pobranie listy akcesoriów do podsumowania 
+//Pobranie listy akcesoriów do podsumowania
 function createListFromItems(itemsArray) {
-  $listOrderAccsesori.innerHTML = '';
+  $listOrderAccsesori.innerHTML = "";
   const end = document.createElement("h2");
   end.textContent = "Aksesoria do zamówienia:";
   if (itemsArray.length === 0) {
@@ -79,9 +78,9 @@ function createListFromItems(itemsArray) {
     }
   }
 }
-//Pobranie danych z Local Storage do  formularza (cena , marka samochodu, ścieżka do zdjęcia samochodu) 
-getDateOfCatinLocStor();
-function getDateOfCatinLocStor() {
+//Pobranie danych z Local Storage do  formularza (cena , marka samochodu, ścieżka do zdjęcia samochodu)
+getDateOfCarinLocStor();
+function getDateOfCarinLocStor() {
   const modelCar = localStorage.getItem("nameCar");
   $carNameForm.innerText = modelCar;
   $carName.innerText = modelCar;
@@ -96,7 +95,7 @@ function getDateOfCatinLocStor() {
 formCart();
 function formCart() {
   $buyReturn.addEventListener("click", () => {
-    window.location.href = "homePage.html";
+    window.location.href = "index.html";
     localStorage.clear();
   });
 }
@@ -114,7 +113,7 @@ accessoriesCar.forEach((element) => {
   const listAccessory = document.createElement("li");
   const listAccessotyP = document.createElement("p");
   listAccessotyP.textContent = `${element.name}: ${element.price} PLN`;
-  listAccessory.appendChild(listAccessotyP)
+  listAccessory.appendChild(listAccessotyP);
   olListAccsesoriasCar.appendChild(listAccessory);
 });
 
@@ -127,7 +126,7 @@ function updatePriceDisplay(totalPrice) {
   $carPrice.innerText = `${totalPrice} PLN`;
 }
 
-//Funkcja dodania akcesoriów do zamówienia 
+//Funkcja dodania akcesoriów do zamówienia
 olListAccsesoriasCar.addEventListener("click", (e) => {
   const targetText = e.target.textContent.trim();
   const price = parseFloat(targetText.split(": ")[1].split(" PLN")[0]);
@@ -156,7 +155,7 @@ olListAccsesoriasCar.addEventListener("click", (e) => {
   updatePriceDisplay(suma);
 });
 
-//Funkcja usunięcia produktu z listy zamówienia 
+//Funkcja usunięcia produktu z listy zamówienia
 listAddAccsesoriesCar.addEventListener("click", (e) => {
   const targetText = e.target.textContent.trim();
   const price = parseFloat(e.target.dataset.price);
@@ -166,7 +165,7 @@ listAddAccsesoriesCar.addEventListener("click", (e) => {
     e.target.innerText = `${targetText.split(" ilość ")[0]} ilość ${
       quantity - 1
     } Suma: ${price * (quantity - 1)} PLN`;
-    suma -= price; 
+    suma -= price;
   } else {
     e.target.remove();
     suma -= price;
@@ -184,34 +183,33 @@ function getRadioBtn() {
       console.log(`Wartość przycisku to ${$radio[i].value} `);
       $methodPay.innerText = $radio[i].value;
       notPay.innerHTML = "";
-      return;
+      return $radio[i].value;
     }
   }
   notPay.innerHTML = "Nie wybrano metody płatności";
   $errorDate.appendChild(notPay);
   console.log("Nie wybrano metody płatności ");
+  return null;
 }
 
-
-//Funkcja zapisuję dane klienta aby przy odświeżeniu strony damy zostaly na miejscu 
+//Funkcja zapisuję dane klienta aby przy odświeżeniu strony damy zostaly na miejscu
 function saveData() {
- 
-  const firstName = document.getElementById('nameImput').value;
-  const adress = document.getElementById('place').value;
-  localStorage.setItem('firstName', firstName);
-  localStorage.setItem('adress',adress );
+  const firstName = document.getElementById("nameImput").value;
+  const adress = document.getElementById("place").value;
+  localStorage.setItem("firstName", firstName);
+  localStorage.setItem("adress", adress);
 }
-window.addEventListener('load', function() {
-  const storedFirstName = localStorage.getItem('firstName') || '';
-  const storedAdress = localStorage.getItem('adress') || '';
-  document.getElementById('nameImput').value = storedFirstName;
-  document.getElementById('place').value = storedAdress;
+window.addEventListener("load", function () {
+  const storedFirstName = localStorage.getItem("firstName") || "";
+  const storedAdress = localStorage.getItem("adress") || "";
+  document.getElementById("nameImput").value = storedFirstName;
+  document.getElementById("place").value = storedAdress;
   saveData();
 });
-document.getElementById('nameImput').addEventListener('input', saveData);
-document.getElementById('place').addEventListener('input', saveData);
+document.getElementById("nameImput").addEventListener("input", saveData);
+document.getElementById("place").addEventListener("input", saveData);
 
-//Funkcja która pobiera dane klienta imię oraz nazwisko oraz adres dostawy 
+//Funkcja która pobiera dane klienta imię oraz nazwisko oraz adres dostawy
 
 function getName() {
   const name = $nameImput.value.trim();
@@ -242,7 +240,7 @@ function getShowDate() {
   });
 }
 
-//Funkcja która sprawdza czy data dostawy została zaznaczona  
+//Funkcja która sprawdza czy data dostawy została zaznaczona
 
 function showDayDeliver() {
   const dateError = document.createElement("p");
@@ -260,7 +258,7 @@ function showDayDeliver() {
   }
 }
 
-//Funkcja która sprawdza tworzy datę dostawy  
+//Funkcja która sprawdza tworzy datę dostawy
 
 function createData() {
   const emptyOption = document.createElement("option");
@@ -290,14 +288,15 @@ function validateForm() {
   const name = getName();
   const place = $place.value;
   const selectedDate = showDayDeliver();
-  console.log(paymentMethod);
+  console.log(` Metoda zwraca ${paymentMethod}`);
   console.log(name);
   console.log(place);
   console.log(`Data dostawy ${selectedDate}`);
 
   if (
-    !paymentMethod === null ||
-    name === "" || !name.includes(" ")||
+    paymentMethod === null ||
+    name === "" ||
+    !name.includes(" ") ||
     place === "" ||
     selectedDate === undefined
   ) {
@@ -312,12 +311,11 @@ function validateForm() {
   $containerForm.style.display = "none";
 
   $endPage.style.display = "block";
-  
 }
 
-//Funkcja przekierowuję do  strony Home Page i usuwa dane lockal Storege 
+//Funkcja przekierowuję do  strony Home Page i usuwa dane lockal Storege
 
 $backToHomePage.addEventListener("click", () => {
-  window.location.href = "homePage.html";
+  window.location.href = "index.html";
   localStorage.clear();
 });

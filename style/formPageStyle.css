@@ -18,6 +18,7 @@ body {
   background-color: rgb(170, 157, 157);
   border-radius: 14px;
 }
+
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -56,9 +57,11 @@ input[type="text"],select {
   border-radius: 4px;
   font-weight: bold;
 }
+
 select {
   width: 419px;
 }
+
 select  option {
   font-weight: bold;
   background-color: rgba(230, 213, 213, 0.573);
@@ -70,6 +73,7 @@ select  option {
   margin-left: 0px;
   padding-left: 0px;
 }
+
 #ulListAccessory li {
   cursor: pointer;
   width: 400px;
@@ -80,6 +84,7 @@ select  option {
   list-style-type: none;
   border-radius: 5px;
 }
+
 #ulListAccessory li p {
   display: flex;
   align-items: center;
@@ -90,6 +95,7 @@ select  option {
   background-color: rgb(30, 100, 30);
   border-radius: 5px;
 }
+
 #listAdd {
   margin-left: 0px;
   padding-left: 0px;
@@ -106,6 +112,7 @@ select  option {
   list-style-type: none;
   border-radius: 5px;
 }
+
 #listAdd :hover {
   background-color: rgb(155, 53, 25);
   border-radius: 5px;
