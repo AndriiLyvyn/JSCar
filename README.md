@@ -21,7 +21,7 @@ Dynamiczny wybór daty: umożliwia użytkownikom wybranie daty dostawy z dynamic
 - Aby uruchomić aplikację, uruchom plik homePage.html w nowoczesnej przeglądarce internetowej.
 - Użyj prostego serwera HTTP, jeśli Twoja przeglądarka ogranicza adresy URL plików przed dostępem do innych plików.
 ## Pliki i katalogi
-- homePage.html - Główny punkt wejścia aplikacji.
+- index.html - Główny punkt wejścia aplikacji.
 - formPage.html - Główny punkt wejścia aplikacji.
 - homePageStyle.css — zawiera styl storny Głownej.
 - formPageStyle.css — zawiera styl strony z formularzem.
