@@ -2,57 +2,102 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  background-color: #f4f4f4;
   padding: 0;
+  margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url(/image/homeImage/pexels-freenwrld-1587267.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
+ nav{font-family:Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  height:60px;
+  background-color: #007bff;
+  display: flex;
+  justify-content: space-around;
+ }
 
-.welcomeSection {
-  width: 90%;
-  border-radius: 12px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.5);
-}
+ nav label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
-.welcome {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 3em;
-  color: rgb(56, 36, 36);
+ nav label a{
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 700;
+ }
+
+ nav ul {
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ nav ul li{
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  margin-left: 10px;
+  list-style-type: none;
+  padding:10px 20px ;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: transform 1s ease; 
+ }
+li:hover{
+  background-color: rgb(21, 44, 130);
+  transform:scale(1.1);
+ }
+
+ 
+
+
+h2{
+  margin-bottom: 30px;
 }
 
 #displayCarts {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  width: 80%;
+  display: grid;
+  grid-template-columns:repeat(3,300px);
   justify-content: center;
+  column-gap: 100px;
   row-gap: 10px;
-  column-gap: 10px;
 }
 
 .carCart {
-  width: 550px;
-  height: 160px;
+  width: 360px;
+  height: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(170, 157, 157);
   align-items: center;
   margin: 10px 10px;
   border: 1px solid #ccc;
+  background-color: white;
   border-radius: 5px;
-  padding: 20px;
+  overflow: hidden;
 }
 
 .carImage {
-  width: 200px;
-  height: 156px;
+  width: 380px;
+  height: 261px;
+  position: relative;
+  bottom: 20px;
+  transition: transform 1s ease; 
+}
+.carImage:hover{
+  transform: scale(1.1); 
+   
 }
 
 .carInfo {
-  text-align: center;
+  text-align: left;
+  font-family:'Franklin Gothic Medium';
+  font-size: 16px;
+  position: relative;
+  bottom: 20px;
 }
 
 .carInfo p {
@@ -60,15 +105,139 @@ body {
 }
 
 .btnBuyCar {
+  position: relative;
+  bottom: 20px;
   background-color: #007bff;
   color: black;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  font-family:'Franklin Gothic Medium';
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 10px 60px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 2s ease;
+  transition: transform 1.2s ease; 
+  box-shadow: 1px 1px 2px  grey;
 }
 
 .btnBuyCar:hover {
   background-color: #0056b3;
+  color:white;
+  transform: scale(1.1); 
+  box-shadow: 0px 2px 5px  grey;
+}
+
+
+
+
+@media (max-width: 1200px) {
+ 
+  nav label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   #displayCarts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Responsywność dla ekranów do 952px */
+@media (max-width: 952px) {
+
+  nav label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+}
+
+/* Responsywność dla ekranów do 858px */
+@media (max-width: 858px) {
+  
+
+
+  nav ul{
+    display: none;
+  }
+}
+
+
+@media (max-width: 500px) {
+  
+
+  nav ul{
+    display: none;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color:green;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.619);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li {
+  display: inline;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+
+
+.footer-links span {
+  color: #ffffff;
 }

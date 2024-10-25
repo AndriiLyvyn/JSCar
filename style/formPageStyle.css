@@ -1,176 +1,300 @@
-body {
-  font-family: Arial, sans-serif;
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/image/homeImage/pexels-freenwrld-1587267.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+nav{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+}
+nav label a{
+  position: relative;
+  top:5px;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 700;
+ }
 #containerForm {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: rgb(170, 157, 157);
+  background-color: #fff;
   border-radius: 14px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 button {
   padding: 10px 20px;
   background-color: #007bff;
-  color: black;
+  color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
   background-color: #0056b3;
 }
 
-#containerForm h1,
-h2,
-h3 {
+h1, h2, h3 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
   font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 22px;
 }
 
 .radioSection {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
+
+}
+.radioSection label {
+  font-size: 25px;
+  margin-right: 40px;
+}
+.radioSection input[type="radio"]{
+  width: 18px;
+}
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-input[type="text"],select {
-  width: 400px;
-  padding: 8px;
-  margin-top: 10px;
+#ulListAccessory, #listAdd {
+  margin-bottom: 20px;
+}
+
+#ulListAccessory li, #listAdd li {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  background-color: rgba(230, 213, 213, 0.573);
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-select {
-  width: 419px;
-}
-
-select  option {
-  font-weight: bold;
-  background-color: rgba(230, 213, 213, 0.573);
+  border-radius: 5px;
   text-align: center;
-  
-}
-
-#ulListAccessory {
-  margin-left: 0px;
-  padding-left: 0px;
-}
-
-#ulListAccessory li {
   cursor: pointer;
-  width: 400px;
-  margin-bottom: 10px;
-  margin: 10px;
-  background-color: #007bff;
-  display: block;
-  list-style-type: none;
-  border-radius: 5px;
 }
 
-#ulListAccessory li p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#ulListAccessory li:hover {
+  background-color: #0fe61e;
 }
 
-#ulListAccessory :hover {
-  background-color: rgb(30, 100, 30);
-  border-radius: 5px;
+#listAdd li:hover{
+  background-color: #eb512a;
 }
 
-#listAdd {
-  margin-left: 0px;
-  padding-left: 0px;
+select option{
+  text-align: center;
+  font-size: 22px;
 }
 
-#listAdd li {
-  cursor: pointer;
-  text-align: left;
-  width: 400px;
-  margin: 10px;
-  padding: 2px;
-  background-color: #007bff;
-  display: block;
-  list-style-type: none;
-  border-radius: 5px;
-}
-
-#listAdd :hover {
-  background-color: rgb(155, 53, 25);
-  border-radius: 5px;
-}
-
-#errorDate {
+#errorDate{
   color: red;
-  margin-top: 10px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
+  margin-top: 10px;
+}
+
+
+
+#errorDate p{
+  margin-top: 20px;
 }
 
 .buyBtn {
   text-align: center;
+  
+  margin-top: 20px;
+}
+
+#buyBtn{
+  font-size: 20px;
+  padding: 16px 120px;
 }
 
 #endPageCart {
-  margin-top: 20px;
-  align-items: center;
-  padding: 25px;
-  text-align: center;
-  background-color: rgb(170, 157, 157);
-  max-width: 800px;
-  height: 600px auto;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid black;
+  background-color: #fff;
   border-radius: 15px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #endPageCart h1 {
-  font-size: 28px;
-  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 #endPageCart img {
-  display: flex;
-  align-items: center;
-  width: 600px;
-  height: 300px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   border-radius: 10px;
+  margin: 20px 0;
 }
-
-#endPageCart ul li {
-  font-size: 16px;
-  list-style-position: outside;
-  list-style-type: none;
-  margin-bottom: 10px;
-  padding-left: 70px;
-  text-align: left;
-}
-
-#backToHomePage {
-  border-radius: 5px;
-  border: 1px solid black;
-}
-
-#backPage {
+#backPage{
   text-align: center;
 }
+#backToHomePage {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#backToHomePage:hover {
+  background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+  #containerForm {
+    padding: 15px;
+  }
+
+  .radioSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .radioSection label {
+    margin-bottom: 10px;
+  }
+
+  input[type="text"], select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #endPageCart {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #containerForm {
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  #endPageCart img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.619);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li {
+  display: inline;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+
+
+.footer-links span {
+  color: #ffffff;
+}
+

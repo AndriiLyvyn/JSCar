@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/style/formPageStyle.css" />
   </head>
   <body>
+    <nav>
+      <label for=""><a href="#">JScat</a></label>
+    </nav>
     <div id="containerForm">
       <button id="buyReturn">Powrót</button>
       <h1>Formularz zakupowy:</h1>
@@ -19,6 +22,7 @@
         <input type="radio" id="leasing" name="payment" value="Leasing" />
       </div>
       <br />
+      <div class="containerForInput">
       <label for="nameImput">Imię Nazwisko:</label>
       <input type="text" id="nameImput" />
       <br />
@@ -28,6 +32,7 @@
       <label for="date">Data dostawy:</label>
       <select name="" id="date"></select>
       <br />
+    </div>
       <h2>Aksesoria do samochodu:</h2>
       <ul id="ulListAccessory"></ul>
       <h3>Aksesoria dodane do zamówienia:</h3>
@@ -56,6 +61,19 @@
         <button id="backToHomePage">Powrót do strony głownej</button>
       </p>
     </div>
+
+    <footer>
+      <div class="footer-content">
+          <p>© 2024 Twoja Strona. Wszelkie prawa zastrzeżone.</p>
+          <ul class="social-links">
+              <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+              <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+              <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+              <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+          </ul>
+        
+      </div>
+  </footer>
 
     <script src="/script/formPageScript.js"></script>
   </body>

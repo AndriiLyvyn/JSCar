@@ -30,6 +30,8 @@ function fetchJSONdate() {
       });
   });
 }
+
+
 craftCart();
 
 function craftCart() {
@@ -68,7 +70,7 @@ function displayCart(data) {
 
     const buyButton = document.createElement("button");
     buyButton.classList.add("btnBuyCar");
-    buyButton.innerText = "Kup";
+    buyButton.innerText = "Kup teraz";
 
     buyButton.addEventListener("click", () => {
       console.log(element.name);
@@ -77,17 +79,18 @@ function displayCart(data) {
       localStorage.setItem("nameCar", element.name);
       localStorage.setItem("photoCar", element.image);
     });
-
-    carInfo.appendChild(h2);
+    carCart.appendChild(h2);
+    carCart.appendChild(h2);
     carInfo.appendChild(price);
     carInfo.appendChild(age);
     carInfo.appendChild(mileage);
     carInfo.appendChild(power);
 
     carCart.appendChild(image);
-
+    
     carCart.appendChild(carInfo);
     carCart.appendChild(buyButton);
+    
 
     $displayCarts.appendChild(carCart);
   });
